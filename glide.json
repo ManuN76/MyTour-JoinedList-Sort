@@ -1,0 +1,28 @@
+[
+  {
+    "kind": "column",
+    "name": "Joined List Sort",
+    "description": "Joined List Sort",
+    "author": "Manu.n",
+    "params": [
+      {
+        "name": "jl",
+        "displayName": "Joined List de data",
+        "type": "string"
+      },
+      {
+        "name": "sep",
+        "displayName": "Separator",
+        "type": "string"
+      },
+      {
+        "name": "sort",
+        "displayName": "Sort 1 = descending, 0 = ascending ",
+        "type": "boolean"
+      }
+    ],
+    "result": {
+      "type": "string"
+    }
+  }
+]
