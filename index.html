@@ -8,22 +8,54 @@
 <div>
   <span id="result"></span>
 </div>
+<script src="glidedate.js"></script>
 <script src="function.js"></script>
 <script src="driver.js"></script>
-
 
 <script>
   // TEST DEBUG !!!!!!!!!!!!!!!!!!!!!!!!!!!!
   testDebug();
 
   async function testDebug() {
-  let list = { type: "string", value: "08/05/2021, 09/05/2021, 10/05/2021, 11/05/2021, 12/05/2021"};
+  //let arr; // = {value: ["edf", "fgt", "abc", "azerty", "toto", "zerty"]}
+  //let list = { type: "string", value: "edf| fgt| abc| azerty| toto| zerty"};
 
-  let sep = { type: "string", value: "," };
+  //let arr; //= { type: { "kind": "array", "items": "number" }, value: [10.5,11,3,2,2.5,1,20]};
+  //let list = { type: "string", value: "10,5 | 11 | 3 | 2 | 2,5 | 1 | 20" };
+
+  let arr = { type: { "kind": "array", "items": "date-time" }, value: [
+"08/05/2021",
+"09/05/2021",
+"10/05/2021",
+"11/05/2021",
+"12/05/2021",
+"13/05/2021",
+"14/05/2021",
+"15/05/2021",
+"16/05/2021",
+"16/05/2021",
+"17/05/2021",
+"18/05/2021",
+"18/05/2021",
+"19/05/2021",
+"20/05/2021",
+"21/05/2021",
+"22/05/2021",
+"16/06/2021",
+"07/05/2021",
+"01/06/2021",
+"03/04/2021",
+"02/04/2021"
+] };
+
+let list = "";
+let format = {type: "string", value: "short"};
+  let type ={value: "date"};
+  let sep = { type: "string", value: "|" };
   let sort = { type: "boolean", value: 0 };
 
-  let result = await window.function(list,sep, sort);
-  document.getElementById("result").innerHTML = result;
+  let result = await window.function(arr, format, list, sep, type, sort);
+  document.getElementById("result").innerHTML = convert(result);
 
   }
 </script>

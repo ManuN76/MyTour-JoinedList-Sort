@@ -1,20 +1,36 @@
 [
   {
     "kind": "column",
-    "name": "Joined List Sort",
-    "description": "Joined List Sort",
+    "name": "Sort",
+    "description": "Array or Joined List Sort",
     "author": "Manu.n",
     "params": [
       {
+        "name": "array",
+        "displayName": "Array",
+        "type": { "kind": "array", "items": "string" }
+      },
+      {
+        "name": "format",
+        "displayName": "Date Array format : short (default), medium, long",
+        "type": "string"
+      },
+      {
         "name": "jl",
-        "displayName": "Joined List de data",
+        "displayName": "Joined List",
         "type": "string"
       },
       {
         "name": "sep",
-        "displayName": "Separator",
+        "displayName": "Separator ('|' default)",
         "type": "string"
       },
+      {
+        "name": "type",
+        "displayName": "Type string (default), number, date",
+        "type": "string"
+      },
+
       {
         "name": "sort",
         "displayName": "Sort 1 = descending, 0 = ascending ",
