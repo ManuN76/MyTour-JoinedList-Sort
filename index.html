@@ -14,16 +14,17 @@
 
 <script>
   // TEST DEBUG !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  testDebug();
+  //testDebug();
 
   async function testDebug() {
-  //let arr; // = {value: ["edf", "fgt", "abc", "azerty", "toto", "zerty"]}
-  //let list = { type: "string", value: "edf| fgt| abc| azerty| toto| zerty"};
+    //let arr; // = {value: ["edf", "fgt", "abc", "azerty", "toto", "zerty"]}
+    //let list = { type: "string", value: "edf| fgt| abc| azerty| toto| zerty"};
 
-  //let arr; //= { type: { "kind": "array", "items": "number" }, value: [10.5,11,3,2,2.5,1,20]};
-  //let list = { type: "string", value: "10,5 | 11 | 3 | 2 | 2,5 | 1 | 20" };
+    //let arr; //= { type: { "kind": "array", "items": "number" }, value: [10.5,11,3,2,2.5,1,20]};
+    //let list = { type: "string", value: "10,5 | 11 | 3 | 2 | 2,5 | 1 | 20" };
 
-  let arr = { type: { "kind": "array", "items": "date-time" }, value: [
+    let arr; // { type: { "kind": "array", "items": "date-time" }, value: [
+    /*
 "08/05/2021",
 "09/05/2021",
 "10/05/2021",
@@ -47,15 +48,17 @@
 "03/04/2021",
 "02/04/2021"
 ] };
+*/
+    let list = { type: "string", value: "12/05/2021 | 09/05/2021 | 10/05/2021 | 20/05/2021 |01/05/2021" };
 
-let list = "";
-let format = {type: "string", value: "short"};
-  let type ={value: "date"};
-  let sep = { type: "string", value: "|" };
-  let sort = { type: "boolean", value: 0 };
 
-  let result = await window.function(arr, format, list, sep, type, sort);
-  document.getElementById("result").innerHTML = convert(result);
+    let format = { type: "string", value: "short" };
+    let type = { value: "date" };
+    let sep = { type: "string", value: "|" };
+    let sort = { type: "boolean", value: 0 };
+
+    let result = await window.function(arr, format, list, sep, type, sort);
+    document.getElementById("result").innerHTML = convert(result);
 
   }
 </script>

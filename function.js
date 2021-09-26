@@ -22,13 +22,12 @@ window.function = function (arr, format, jl, sep, type, tri) {
       // string
       return dt.trim();
     } else if (type == "number") {
-      // number
-
       // string to number
       if (isNaN(dt)) {
         dt = dt.replace(",", ".");
         return parseFloat(dt);
       }
+      // number
       return dt;
     } else {
       // date
